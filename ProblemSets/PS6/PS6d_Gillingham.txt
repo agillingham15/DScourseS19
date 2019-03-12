@@ -1,0 +1,6 @@
+batting <- read.csv("C:/Users/Andrew Gillingham/Documents/Astros Batting Data.csv")
+View(batting)
+library(dplyr)
+batting_split <- split(batting$launch_speed, batting$events)
+ls_mean <- sapply(batting_split, mean)
+barplot(ls_mean)

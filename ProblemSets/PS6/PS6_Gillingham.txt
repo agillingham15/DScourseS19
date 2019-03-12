@@ -1,0 +1,5 @@
+batting <- read.csv("C:/Users/Andrew Gillingham/Documents/Astros Batting Data.csv")
+View(batting)
+library(dplyr)
+library(ggplot2)
+ggplot(batting, aes(x = pfx_x, y = pfx_z)) + xlim(-2.5, 2.5) + ylim(-2.5, 2.5) + geom_bin2d()

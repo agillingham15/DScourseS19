@@ -1,0 +1,4 @@
+HallOfFame <- read.csv("C:/Users/Andrew Gillingham/Desktop/baseballdatabank-2019.2/core/HallOfFame.csv")
+View(HallOfFame)
+library(ggplot2)
+ggplot(HallOfFame, aes(x=yearID, y=votes, color=inducted)) + geom_point() + geom_smooth(method=lm, se=FALSE, fullrange=TRUE)
